@@ -14,20 +14,20 @@ declare namespace pageobject{
         _getCallbacks(id: number, pageObject: elements.Element):Function[];
         run(from: number, to: number):Promise<void>;
         stopWorkflow():Promise<void>;
-        on(id: number, Function);
+        on(id: number, Function):any;
     }
 
     interface OptionsNavigator{
         driver: webdriver.WebDriver;
-        waitForAjaxStrategy: Function;
-        waitForUrlStrategy: Function;
+        waitForAjaxStrategy: any;
+        waitForUrlStrategy: any;
     }
 
     class PageNavigator{
         constructor(options: OptionsNavigator);
         visit(url: string):Promise<void>;
-        waitForAjax(timeout: number, msg: string);
-        waitForUrl(timeout: number, msg: string);        
+        waitForAjax(timeout: number, msg: string):any;
+        waitForUrl(timeout: number, msg: string):any;
     }    
 }
 
