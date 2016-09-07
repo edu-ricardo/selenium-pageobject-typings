@@ -14,7 +14,7 @@ declare namespace pageobject{
         _getCallbacks(id: number, pageObject: elements.Element):Function[];
         run(from: number, to: number):Promise<void>;
         stopWorkflow():Promise<void>;
-        on(id: number, Function):any;
+        on(id: number, action: Function):any;
     }
 
     interface OptionsNavigator{
